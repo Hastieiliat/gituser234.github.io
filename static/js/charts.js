@@ -95,6 +95,9 @@ function buildCharts(sample) {
     var holds_otu_labels = firstsample.otu_labels;
     var holds_sample_values = firstsample.sample_values;
     console.log(holds_otu_ids);
+
+    var topFiveCityGrowths = filtersample.map(city => (city.otu_ids));
+    console.log(topFiveCityGrowths[0][0]);
     // 7. Create the yticks for the bar chart.
     // Hint: Get the the top 10 otu_ids and map them in descending order  
     //  so the otu_ids with the most bacteria are last. 
@@ -114,7 +117,7 @@ function buildCharts(sample) {
     console.log(yticks);
     // 8. Create the trace for the bar chart. 
     var barData = {
-      // y: [holds_otu_ids[0].toString(),holds_otu_ids[1].toString(),holds_otu_ids[2].toString(),holds_otu_ids[3].toString(),holds_otu_ids[4].toString(),holds_otu_ids[5].toString(),holds_otu_ids[6].toString(),holds_otu_ids[7].toString(),holds_otu_ids[8].toString(),holds_otu_ids[9].toString()],
+      // y: [topFiveCityGrowths[0][0].toString(),holds_otu_ids[1].toString(),holds_otu_ids[2].toString(),holds_otu_ids[3].toString(),holds_otu_ids[4].toString(),holds_otu_ids[5].toString(),holds_otu_ids[6].toString(),holds_otu_ids[7].toString(),holds_otu_ids[8].toString(),holds_otu_ids[9].toString()],
       y: [
       "OTU1",
       "OTU2",
